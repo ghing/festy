@@ -46,6 +46,12 @@ var Set = Backbone.Model.extend({
             attributes.end_date = endDateTime.toDateString();
             attributes.end_time = this.formatTime(endDateTime);
         }
+
+        // Create a slug for the set based on the venue and start time
+        if (attributes.hasOwnProperty('venue_slug') && attributes.hasOwnProperty('start_datetime')) {
+	    attributes.slug = attributes.venue_slug +  "-" + attributes.start_datetime.getTime();   
+	}
+
         // Call set on the parent (e.g. super)
         Backbone.Model.prototype.set.call(this, attributes, options);
     },

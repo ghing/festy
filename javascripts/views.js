@@ -24,6 +24,7 @@ App.Views.Index = Backbone.View.extend({
                 out += "<h2>" + dateStr + "</h2>\n";
             }
             out += template({
+                slug: set.get('slug'),
                 start_time: set.get('start_time'),
                 end_time: set.get('end_time'),
                 band: set.get('band'),
@@ -36,6 +37,7 @@ App.Views.Index = Backbone.View.extend({
     },
 
     set_template: "<div class='set'>\n" +
+        "    <a name='{{ slug }}'></a>\n" +
     	"    <span class='start-time'>{{ start_time }}</span>\n" +
         "    <span class='end-time'>{{ end_time }}</span>\n" +
         "    <span class='band'>{{ band }}</band>\n" +
