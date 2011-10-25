@@ -9,7 +9,7 @@ App.Collections.Sets = Backbone.Collection.extend({
     model: Set,
     url: SETS_URI,
     comparator: function(set) {
-        // Filter the collection based on start time
+        // Sort the collection based on start time
         return set.get('start_datetime').getTime();
     } 
 });
