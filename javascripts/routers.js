@@ -37,7 +37,6 @@ App.Routers.Sets = Backbone.Router.extend({
                         var venue = venues.find(function(venue) { 
                             return venue.get('slug') == venueSlug;
                         });
-                        console.debug(sets);
                         var venueSets = sets.filter(function(set) {
                             return set.get('venue_slug') == slug;
                         });
