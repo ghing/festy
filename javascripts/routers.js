@@ -24,6 +24,9 @@ App.Routers.Sets = Backbone.Router.extend({
     	if (slug == "bar-1982") {
 	    slug = "1982";
 	}
+        else if (slug == "durty-nelly-s") {
+	    slug = "durty-nelly-s-pub";
+ 	}
     	var venues = new App.Collections.Venues();
 	venues.fetch({
             success: function() {
