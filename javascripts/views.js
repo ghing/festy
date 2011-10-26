@@ -95,7 +95,8 @@ App.Views.Venue = Backbone.View.extend({
 	return this;
     },
 
-    venue_template: "<div class='venue'>\n" +
+    venue_template: "<a href='/'>Back</a>\n" + 
+        "<div class='venue'>\n" +
         "    <h2 class='name'>{{ name }}</h2>\n" +
 	"    <p class='street'>{{ street }}</p>\n" + 
         '    <p class="directions"><a href="http://maps.google.com/maps?saddr=&daddr={{ address }}">Directions</a>\n' + 
