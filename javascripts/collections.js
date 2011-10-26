@@ -7,9 +7,11 @@ var SETS_URI = 'https://api.scraperwiki.com/api/1.0/datastore/sqlite?format=json
 
 App.Collections.Sets = Backbone.Collection.extend({
     model: Set,
+    
     url: SETS_URI,
+    
     comparator: function(set) {
         // Sort the collection based on start time
         return set.get('start_datetime').getTime();
-    } 
+    }
 });
