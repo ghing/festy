@@ -122,7 +122,7 @@ App.Views.Venue = Backbone.View.extend({
     venue_template: "<div id='map-canvas' style='width: 100%; height: 100%;'></div>\n",
  
     venue_infowindow_template : '<div class="info-window">\n' + 
-        '    <h1>{{ name }}</h1>\n' +
+        '    <h1 class="venue-name">{{ name }}</h1>\n' +
         '    <p class="address">{{ address }}</p>\n' +
         '    <p class="directions"><a href="http://maps.google.com/maps?saddr=&daddr={{ address }}">Directions</a>\n'
 
