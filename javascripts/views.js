@@ -54,10 +54,11 @@ App.Views.Index = Backbone.View.extend({
 
     set_template: "<div class='{{ container_class }}'>\n" +
         "    <a name='{{ slug }}'></a>\n" +
-    	"    <span class='start-time'>{{ start_time }}</span>\n" +
-        "    <span class='end-time'>{{ end_time }}</span>\n" +
-        "    <span class='band'>{{ band }}</span>\n" +
-        "    <span class='venue'><a href='#venues/{{ venue_slug }}'>{{ venue }}</a></span>\n" +
+        "    <div class='band'>{{ band }}</div>\n" +
+    	"    <div class='start-time'>{{ start_time }}</div>\n" +
+        "    <div class='time-sep'>&nbsp;-&nbsp;</div>" +
+        "    <div class='end-time'>{{ end_time }}</div>\n" +
+        "    <div class='venue'><a href='#venues/{{ venue_slug }}'>{{ venue }}</a></div>\n" +
         "</div>\n"
 });
 

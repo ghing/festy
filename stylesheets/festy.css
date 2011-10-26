@@ -9,7 +9,8 @@ body { background-color:#402718 }
 body { font-family: Arial, Helvetica, sans-serif; color: #fff } 
 #app h2 { font-family: Arial, Helvetica, sans-serif } 
 .info-window h1.venue-name { font-size: 1.2em }
-.set .start-time, .set .end-time { font-size: 2em }
+.set .band { font-size: 1.2em }
+.set .start-time, .set .end-time { font-size: 1em }
     
 /* Give container elements types to make Google Maps happy */
 html { height: 100% }
@@ -19,6 +20,5 @@ body { height: 100%; margin: 0; padding: 0 }
 #map_canvas { height: 100% }
 
 .set { padding: 1em }
-.set span { display: block; float: left }
-.set .start-time:after { content: " - " }
-.set .end-time { clear: right }
+.set .start-time { float: left }
+.set .time-sep { float: left }
