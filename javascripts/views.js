@@ -14,6 +14,7 @@ App.Views.Index = Backbone.View.extend({
         var template = _.template(this.set_template);
         var dateStr = "";
 	var currentDateTime = new Date();
+        var zebraClass = "odd";
 
         this.sets.each(function(set) {
             startDate = set.get('start_date');
@@ -25,6 +26,7 @@ App.Views.Index = Backbone.View.extend({
 	    if (set.get('end_datetime').getTime() > currentDateTime.getTime()) {
 	        containerClass += " ongoing-or-upcoming";	
 	    }
+            containerClass += " " + zebraClass;
             out += template({
 	    	container_class: containerClass, 
                 slug: set.get('slug'),
@@ -34,6 +36,12 @@ App.Views.Index = Backbone.View.extend({
                 venue: set.get('venue'),
 		venue_slug: set.get('venue_slug')
             }); 
+            if (zebraClass == "odd") {
+                zebraClass = "even";
+            }
+            else {
+                zebraClass = "odd";
+            }
 	});   
 
         $(this.el).html(out);
