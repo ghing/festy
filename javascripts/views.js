@@ -123,6 +123,7 @@ App.Views.Venue = Backbone.View.extend({
  
     venue_infowindow_template : '<div class="info-window">\n' + 
         '    <h1>{{ name }}</h1>\n' +
-        '    <p class="address">{{ address }}</p>\n'
+        '    <p class="address">{{ address }}</p>\n' +
+        '    <p class="directions"><a href="http://maps.google.com/maps?saddr=&daddr={{ address }}">Directions</a>\n'
 
 });
