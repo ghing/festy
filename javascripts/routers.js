@@ -1,10 +1,10 @@
 App.Routers.Sets = Backbone.Router.extend({
     routes: {
-        "":   "index"
+        "":   "index",
+	"venues/:slug":    "venue"
     },
 
     index: function() {
-        // TODO: Implement this.
         var sets = new App.Collections.Sets();
         sets.fetch({
             success: function() {
@@ -17,6 +17,26 @@ App.Routers.Sets = Backbone.Router.extend({
             }
         });
        
+    },
+
+    venue: function(slug) {
+        // Fix case where venue was named differently in sets vs. venues
+    	if (slug == "bar-1982") {
+	    slug = "1982";
+	}
+    	var venues = new App.Collections.Venues();
+	venues.fetch({
+            success: function() {
+                new App.Views.Venue({ venue: venues.find(function(venue) { 
+		    return venue.get('slug') == slug;
+		})});
+            },
+            error: function() {
+		// QUESTION: What does Backbone do with the error class?
+                new Error({ message: "Error loading venues." });
+		console.error('Error loading venues.');
+            }
+	});
     }
 
 });
