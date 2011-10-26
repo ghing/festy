@@ -92,6 +92,11 @@ App.Views.Venue = Backbone.View.extend({
         $(this.el).html(out);
         $('#app').html(this.el); 
 
+        // Venue listings should always start at the top
+	var newPosition = $('.venue').offset();
+        console.debug('scrolling to ' + '(' + 0 + ',' + newPosition.top + ')';
+        window.scrollTo(0, newPosition.top - 10);	
+
 	return this;
     },
 
