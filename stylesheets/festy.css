@@ -1,7 +1,7 @@
 /* Colors of things */
 body { background-color:#402718 } 
 #app h2 { color: #AEBC5D } 
-#app a { color: #AEBC5D } 
+a, a:visited { color: #AEBC5D } 
 .set.odd { background-color: #605d50 } 
 .set.even { background-color: #6B6759 } 
 
@@ -15,7 +15,7 @@ body { font-family: Arial, Helvetica, sans-serif; color: #fff }
 /* Give container elements types to make Google Maps happy */
 html { height: 100% }
 body { height: 100%; margin: 0; padding: 0 }
-.container { height: 100% }
+.container { height: 100%; padding-top: 2em; }
 #app { height: 100% }
 #map_canvas { height: 100% }
 
